@@ -1,0 +1,247 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  outline: 0;
+
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  -o-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+body {
+    width: 700px;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    overflow-x: hidden !important;
+    margin: 0 auto;
+}
+
+@media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+   } 
+}
+
+input,
+textarea {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  resize: none;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0;}
+
+[class^="form-table-"] > h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    background: #E8E8E8;
+    padding: 5px;
+    border-top: 2px solid #000;
+}
+[class^="form-table-"] + [class^="form-table-"] > h3 {border: none;}
+
+.form-table-1,
+.form-table-3 {border: 2px solid #000;}
+.form-table-3 + .form-table-3 {border-top: none;}
+.form-table-3 {padding-bottom: 10px;}
+.num-box {
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    max-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-right: 4px;
+    position: relative;
+    z-index: 1;
+
+    font-weight: 700;
+}
+
+.num-box::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+}
+
+.inpput-box {
+    -ms-flex: 0 0 calc(100% - 30px);
+    flex: 0 0 calc(100% - 30px);
+    max-width: calc(100% - 30px);
+}
+
+.inpput-box textarea {
+    width: 100%;
+    height: 80px;
+    background: #F0F4FF;
+    padding: 20px;
+}
+
+#phone,
+#fNumber,
+#e-mail,
+#elc {
+    height: 60px;
+    padding: 5px;
+}
+
+.inpput-box textarea.bname {background: #F1F3CB;}
+
+.inpput-box label {
+    padding: 5px;
+    display: block;
+    margin: 0;
+}
+
+.inpput-box ~ .inpput-box label,
+.form-table-1 .row {border-top: 2px solid #000;}
+
+.table-header {
+    background: #E8E8E8;
+}
+
+.table-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.t-row {border: 2px solid #000;}
+.t-row + .t-row {border-top: none;}
+
+.l {
+    background: #fff;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    max-width: 30px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-right: 2px solid #000;
+}
+
+.desc {
+    -ms-flex: 0 0 calc(60% - 30px);
+    flex: 0 0 calc(60% - 30px);
+    max-width: calc(60% - 30px);
+}
+
+.gn{
+    border-right: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+.gn,
+.in {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.desc textarea,
+.gn textarea,
+.in textarea {
+    width: 100%;
+    height: 60px;
+    background: #F0F4FF;
+    padding: 10px;
+}
+
+.th-td-1 {
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.th-td-2 {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.th-td-2,
+.th-td-3 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.check-radio > span {
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+    padding-right: 30px;
+}
+
+.check-radio > span::after {
+    position: absolute;
+    content: '';
+    border-left: 5px solid #000;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    right: 10px;
+    top: 10px;
+}
+
+.cbox {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.inpput-box .cbox .custom-btn {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.custom-btn::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 2px solid #666;
+    background: #F0F4FF;
+    border-radius: 3px;
+    left: 0;
+    top: 0;
+}
+
+.custom-btn::after {
+    position: absolute;
+    content: '✓';
+    top: 50%;
+    left: 8px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: none;
+}
+
+.checks:checked + .custom-btn::after {display: block;}
