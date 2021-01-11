@@ -1,0 +1,222 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  outline: 0;
+
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  -o-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+body {
+    width: 1024px;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    overflow-x: hidden !important;
+    margin: 0 auto;
+}
+
+@media print {
+    body {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+   } 
+}
+
+input,
+textarea {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  resize: none;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0;}
+
+.form-wrapper {
+    border-radius: 10px;
+    margin: 30px 0;
+    padding: 30px;
+    box-shadow: 
+        0 0 50px rgba(0,0,0,.15),
+        inset 0 0 15px rgba(0,0,0,.2);
+}
+
+@media print {
+    .form-wrapper {
+        margin: 0;
+        border: 6px double #666;
+        box-shadow: none;
+    }
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: #444;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #999;
+}
+
+.products-owner input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+.products-owner textarea {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    border: 2px solid #999;
+    border-radius: 5px;
+}
+
+.products-owner input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {height: 40px;}
+textarea.product-desc-1 {
+    height: 100px;
+    padding: 15px;
+}
+
+.form-area label:not(.custom-btn) {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 3px;
+}
+
+.products-description {
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 2px solid #999;
+}
+
+.the-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    padding: 10px 0;
+}
+
+.the-header {border-bottom: 2px solid #999;}
+.products-description input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+.products-description textarea {
+    width: 100%;
+    padding: 0 10px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.products-desc > textarea {
+    padding: 10px;
+    line-height: initial;
+    text-align: left;
+}
+
+.col-inner-sm,
+.products-desc {position: relative;}
+.col-inner-sm::before,
+.products-desc::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #999;
+    top: 0;
+    left: 0;
+}
+
+.col-inner-sm::before {height: calc(100% + 10px);}
+.the-content > .row + .row {border-top: 2px solid #999;}
+.the-row-num {
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    max-width: 30px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.products-desc {
+    -ms-flex: 0 0 calc(100% - 30px);
+    flex: 0 0 calc(100% - 30px);
+    max-width: calc(100% - 30px);
+}
+
+.form-h2 {
+    font-size: 15px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.form-h2::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #999;
+    left: 0;
+    top: 5px;
+}
+
+.custom-btn {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 5px 30px 5px 0;
+}
+
+.custom-btn::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 2px solid #666;
+    border-radius: 3px;
+    left: 0;
+    top: 0;
+}
+
+.custom-btn::after {
+    position: absolute;
+    content: '✓';
+    font-size: 25px;
+    top: 45%;
+    left: 5px;
+    font-weight: 700;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: none;
+}
+
+.checks:checked + .custom-btn::after {display: block;}
+.checks:checked + .custom-btn {font-weight: 900;}
