@@ -219,4 +219,4 @@ textarea.product-desc-1 {
 }
 
 .checks:checked + .custom-btn::after {display: block;}
-.checks:checked + .custom-btn {font-weight: 900;}
+.checks:checked + .custom-btn {text-shadow: 1px 0 0 #000}
